@@ -1,0 +1,33 @@
+drop table if exists pokemones
+
+drop table if exists roles
+
+drop table if exists usuarios
+
+drop table if exists usuarios_roles
+
+create table pokemones (id_pokemon bigint not null auto_increment, alias varchar(255), id_usuario bigint, imagen varchar(255), nature varchar(255), nombre_pokedex varchar(255), numero_pokedex integer not null, shiny bit, primary key (id_pokemon)) engine=InnoDB
+
+create table roles (id_rol bigint not null auto_increment, nombre varchar(255), primary key (id_rol)) engine=InnoDB
+
+create table usuarios (id_usuario bigint not null auto_increment, email varchar(255), enabled bit, nombre varchar(255), password varchar(60), paterno varchar(255), username varchar(255), primary key (id_usuario)) engine=InnoDB
+
+create table usuarios_roles (usuario_id bigint not null, rol_id bigint not null, primary key (usuario_id, rol_id)) engine=InnoDB
+
+alter table roles add constraint UK_ldv0v52e0udsh2h1rs0r0gw1n unique (nombre)
+
+alter table usuarios add constraint UK_m2dvbwfge291euvmk6vkkocao unique (username)
+
+alter table usuarios_roles add constraint FK5338ehgluufgc8bpj08nrq970 foreign key (rol_id) references roles (id_rol)
+
+alter table usuarios_roles add constraint FKqcxu02bqipxpr7cjyj9dmhwec foreign key (usuario_id) references usuarios (id_usuario)
+
+INSERT INTO roles(id_rol, nombre) values(1, 'ROLE_ADMIN')
+
+INSERT INTO usuarios(id_usuario, nombre, paterno, email, username, password, enabled) values(1, 'Ash', 'Ketchum', 'juliolicona007@hotmail.com', 'ash', 'pokemon', 1)
+
+INSERT INTO usuarios(id_usuario, nombre, paterno, email, username, password, enabled) values(2, 'Julio', 'Figueroa', 'juliolicona007@gmail.com', 'julio', 'prueba', 1)
+
+INSERT INTO usuarios_roles(usuario_id, rol_id) VALUES(1, 1)
+
+INSERT INTO usuarios_roles(usuario_id, rol_id) VALUES(2, 1)
