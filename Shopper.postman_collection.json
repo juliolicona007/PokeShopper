@@ -1,0 +1,341 @@
+{
+	"info": {
+		"_postman_id": "0850d91f-5c69-40a8-87f0-aff55cf1cbe2",
+		"name": "Shopper",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetPokemonesByEntrenador",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1ODkxNzQxNzgsInVzZXJfbmFtZSI6ImFzaCIsImF1dGhvcml0aWVzIjpbIlJPTEVfQURNSU4iXSwianRpIjoiYzM5YTU5MmQtMzVmOC00ODhhLWJjMjEtNjBjMGUxOTIxYzVlIiwiY2xpZW50X2lkIjoicG9rZVNob3BwZXJBcHAiLCJzY29wZSI6WyJyZWFkIiwid3JpdGUiXX0.h7paaAvKBoB0gErLgBHd6iYLu5W3TcBgTlPmB9pce4cicSp3_MQk6ChGMIMS7LB0MHoO5UFJP3EHkctJgQp3pYP2F0PAkxR5QELL9_2RUWPKA0Yzh_VrejTGnkkXGNcwaqkX9YfOlFAn9cD0H6GrHNZLNFJdSGSmUjXCz_IIYTpkbWednTOZORYBysAmfOBLSmczLLHUl5hyxXFqocAQcoMNjqsCr3w5qe513Wn1DxvNapi3f5k5Xu__0tRoLKOfck6MFn8SBHC2akLy0ZtlvV1Kdtj-3OLuW9REO9S6qWb-kS8ya1FNi_XyPUF3vxhoIMLtwg-mGHUDf7Y4mVhB2A",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/PokeShopper/pokemon/entrenador/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"PokeShopper",
+						"pokemon",
+						"entrenador",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddPokemon",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1ODkxNzQxNzgsInVzZXJfbmFtZSI6ImFzaCIsImF1dGhvcml0aWVzIjpbIlJPTEVfQURNSU4iXSwianRpIjoiYzM5YTU5MmQtMzVmOC00ODhhLWJjMjEtNjBjMGUxOTIxYzVlIiwiY2xpZW50X2lkIjoicG9rZVNob3BwZXJBcHAiLCJzY29wZSI6WyJyZWFkIiwid3JpdGUiXX0.h7paaAvKBoB0gErLgBHd6iYLu5W3TcBgTlPmB9pce4cicSp3_MQk6ChGMIMS7LB0MHoO5UFJP3EHkctJgQp3pYP2F0PAkxR5QELL9_2RUWPKA0Yzh_VrejTGnkkXGNcwaqkX9YfOlFAn9cD0H6GrHNZLNFJdSGSmUjXCz_IIYTpkbWednTOZORYBysAmfOBLSmczLLHUl5hyxXFqocAQcoMNjqsCr3w5qe513Wn1DxvNapi3f5k5Xu__0tRoLKOfck6MFn8SBHC2akLy0ZtlvV1Kdtj-3OLuW9REO9S6qWb-kS8ya1FNi_XyPUF3vxhoIMLtwg-mGHUDf7Y4mVhB2A",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"idPokemon\" : null,\n\t\"numeroPokedex\" : 1,\n\t\"nombrePokedex\" : \"Picachu\",\n\t\"imagen\" : \"\",\n\t\"alias\" : \"Pica pica\",\n\t\"shiny\" : false,\n\t\"nature\" : \"Electrico\",\n\t\"idUsuario\" : 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/PokeShopper/pokemon/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"PokeShopper",
+						"pokemon",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateAllPokemones",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1ODkxNzQxNzgsInVzZXJfbmFtZSI6ImFzaCIsImF1dGhvcml0aWVzIjpbIlJPTEVfQURNSU4iXSwianRpIjoiYzM5YTU5MmQtMzVmOC00ODhhLWJjMjEtNjBjMGUxOTIxYzVlIiwiY2xpZW50X2lkIjoicG9rZVNob3BwZXJBcHAiLCJzY29wZSI6WyJyZWFkIiwid3JpdGUiXX0.h7paaAvKBoB0gErLgBHd6iYLu5W3TcBgTlPmB9pce4cicSp3_MQk6ChGMIMS7LB0MHoO5UFJP3EHkctJgQp3pYP2F0PAkxR5QELL9_2RUWPKA0Yzh_VrejTGnkkXGNcwaqkX9YfOlFAn9cD0H6GrHNZLNFJdSGSmUjXCz_IIYTpkbWednTOZORYBysAmfOBLSmczLLHUl5hyxXFqocAQcoMNjqsCr3w5qe513Wn1DxvNapi3f5k5Xu__0tRoLKOfck6MFn8SBHC2akLy0ZtlvV1Kdtj-3OLuW9REO9S6qWb-kS8ya1FNi_XyPUF3vxhoIMLtwg-mGHUDf7Y4mVhB2A",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"idPokemon\": null,\r\n        \"numeroPokedex\": 1,\r\n        \"nombrePokedex\": \"Picachu\",\r\n        \"imagen\": \"\",\r\n        \"alias\": \"Pica pica\",\r\n        \"shiny\": false,\r\n        \"nature\": \"Electrico\",\r\n        \"idUsuario\": 1\r\n    },\r\n    {\r\n        \"idPokemon\": null,\r\n        \"numeroPokedex\": 2,\r\n        \"nombrePokedex\": \"Squirtle\",\r\n        \"imagen\": \"\",\r\n        \"alias\": \"Aguitas\",\r\n        \"shiny\": false,\r\n        \"nature\": \"Agua\",\r\n        \"idUsuario\": 1\r\n    }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/PokeShopper/pokemon/updateAll/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"PokeShopper",
+						"pokemon",
+						"updateAll",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateDetallesPokemon",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1ODkxNzQxNzgsInVzZXJfbmFtZSI6ImFzaCIsImF1dGhvcml0aWVzIjpbIlJPTEVfQURNSU4iXSwianRpIjoiYzM5YTU5MmQtMzVmOC00ODhhLWJjMjEtNjBjMGUxOTIxYzVlIiwiY2xpZW50X2lkIjoicG9rZVNob3BwZXJBcHAiLCJzY29wZSI6WyJyZWFkIiwid3JpdGUiXX0.h7paaAvKBoB0gErLgBHd6iYLu5W3TcBgTlPmB9pce4cicSp3_MQk6ChGMIMS7LB0MHoO5UFJP3EHkctJgQp3pYP2F0PAkxR5QELL9_2RUWPKA0Yzh_VrejTGnkkXGNcwaqkX9YfOlFAn9cD0H6GrHNZLNFJdSGSmUjXCz_IIYTpkbWednTOZORYBysAmfOBLSmczLLHUl5hyxXFqocAQcoMNjqsCr3w5qe513Wn1DxvNapi3f5k5Xu__0tRoLKOfck6MFn8SBHC2akLy0ZtlvV1Kdtj-3OLuW9REO9S6qWb-kS8ya1FNi_XyPUF3vxhoIMLtwg-mGHUDf7Y4mVhB2A",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"idPokemon\" : 2,\n\t\"numeroPokedex\" : 1,\n\t\"nombrePokedex\" : \"Picachu\",\n\t\"imagen\" : \"\",\n\t\"alias\" : \"Pichu\",\n\t\"shiny\" : true,\n\t\"nature\" : \"Electrico\",\n\t\"idUsuario\" : 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/PokeShopper/pokemon/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"PokeShopper",
+						"pokemon",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeletePokemon",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1ODkxNzQxNzgsInVzZXJfbmFtZSI6ImFzaCIsImF1dGhvcml0aWVzIjpbIlJPTEVfQURNSU4iXSwianRpIjoiYzM5YTU5MmQtMzVmOC00ODhhLWJjMjEtNjBjMGUxOTIxYzVlIiwiY2xpZW50X2lkIjoicG9rZVNob3BwZXJBcHAiLCJzY29wZSI6WyJyZWFkIiwid3JpdGUiXX0.h7paaAvKBoB0gErLgBHd6iYLu5W3TcBgTlPmB9pce4cicSp3_MQk6ChGMIMS7LB0MHoO5UFJP3EHkctJgQp3pYP2F0PAkxR5QELL9_2RUWPKA0Yzh_VrejTGnkkXGNcwaqkX9YfOlFAn9cD0H6GrHNZLNFJdSGSmUjXCz_IIYTpkbWednTOZORYBysAmfOBLSmczLLHUl5hyxXFqocAQcoMNjqsCr3w5qe513Wn1DxvNapi3f5k5Xu__0tRoLKOfck6MFn8SBHC2akLy0ZtlvV1Kdtj-3OLuW9REO9S6qWb-kS8ya1FNi_XyPUF3vxhoIMLtwg-mGHUDf7Y4mVhB2A",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/PokeShopper/pokemon/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"PokeShopper",
+						"pokemon",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllPokemones",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1ODkxNzQxNzgsInVzZXJfbmFtZSI6ImFzaCIsImF1dGhvcml0aWVzIjpbIlJPTEVfQURNSU4iXSwianRpIjoiYzM5YTU5MmQtMzVmOC00ODhhLWJjMjEtNjBjMGUxOTIxYzVlIiwiY2xpZW50X2lkIjoicG9rZVNob3BwZXJBcHAiLCJzY29wZSI6WyJyZWFkIiwid3JpdGUiXX0.h7paaAvKBoB0gErLgBHd6iYLu5W3TcBgTlPmB9pce4cicSp3_MQk6ChGMIMS7LB0MHoO5UFJP3EHkctJgQp3pYP2F0PAkxR5QELL9_2RUWPKA0Yzh_VrejTGnkkXGNcwaqkX9YfOlFAn9cD0H6GrHNZLNFJdSGSmUjXCz_IIYTpkbWednTOZORYBysAmfOBLSmczLLHUl5hyxXFqocAQcoMNjqsCr3w5qe513Wn1DxvNapi3f5k5Xu__0tRoLKOfck6MFn8SBHC2akLy0ZtlvV1Kdtj-3OLuW9REO9S6qWb-kS8ya1FNi_XyPUF3vxhoIMLtwg-mGHUDf7Y4mVhB2A",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/PokeShopper/pokemon/listAll",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"PokeShopper",
+						"pokemon",
+						"listAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetPokemonDetalis",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1ODkxNzQxNzgsInVzZXJfbmFtZSI6ImFzaCIsImF1dGhvcml0aWVzIjpbIlJPTEVfQURNSU4iXSwianRpIjoiYzM5YTU5MmQtMzVmOC00ODhhLWJjMjEtNjBjMGUxOTIxYzVlIiwiY2xpZW50X2lkIjoicG9rZVNob3BwZXJBcHAiLCJzY29wZSI6WyJyZWFkIiwid3JpdGUiXX0.h7paaAvKBoB0gErLgBHd6iYLu5W3TcBgTlPmB9pce4cicSp3_MQk6ChGMIMS7LB0MHoO5UFJP3EHkctJgQp3pYP2F0PAkxR5QELL9_2RUWPKA0Yzh_VrejTGnkkXGNcwaqkX9YfOlFAn9cD0H6GrHNZLNFJdSGSmUjXCz_IIYTpkbWednTOZORYBysAmfOBLSmczLLHUl5hyxXFqocAQcoMNjqsCr3w5qe513Wn1DxvNapi3f5k5Xu__0tRoLKOfck6MFn8SBHC2akLy0ZtlvV1Kdtj-3OLuW9REO9S6qWb-kS8ya1FNi_XyPUF3vxhoIMLtwg-mGHUDf7Y4mVhB2A",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/PokeShopper/pokemon/pokedex/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"PokeShopper",
+						"pokemon",
+						"pokedex",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "shopper2020",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "pokeShopperApp",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "ash",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "pokemon",
+							"type": "text"
+						},
+						{
+							"key": "grant_type",
+							"value": "password",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/PokeShopper/oauth/token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"PokeShopper",
+						"oauth",
+						"token"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
